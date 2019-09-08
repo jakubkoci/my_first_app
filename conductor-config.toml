@@ -1,0 +1,24 @@
+[[agents]]
+id = "agent1-id"
+name = "Agent 1"
+public_address = "HcScIHd75pCzwgpsf7oFwU3q6Qit6yfbvkdBt7jPFmomspdjW3ixh7aVRv7obmz"
+keystore_file = "/Users/jakub/Library/Preferences/org.holochain.holochain/keys/HcScIHd75pCzwgpsf7oFwU3q6Qit6yfbvkdBt7jPFmomspdjW3ixh7aVRv7obmz"
+
+[[dnas]]
+id = "my_first_app_dna"
+file = "./dist/my_first_app.dna.json"
+hash = "QmQffx5SvuWvXZPhGmbneeZ4rCn2NfSrjjixueeZvDg4m4"
+
+[[instances]]
+agent = "agent1-id"
+dna = "my_first_app_dna"
+id = "my_first_app"
+[instances.storage]
+path = "./tmp/storage-file"
+type = "file"
+
+[[interfaces]]
+id = "http_interface"
+  [interfaces.driver]
+  type = "http"
+  port = 3000

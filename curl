@@ -1,0 +1,9 @@
+curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc": "2.0","id": "0","method": "info/instances", "params": {}}' http://localhost:3000
+
+curl -X POST -H "Content-Type: application/json" -d '{"id": "0", "jsonrpc": "2.0", "method": "call", "params": {"instance_id": "test-instance", "zome": "my_zome", "function": "create_anchor", "args": {} }}' http://localhost:8888
+
+curl -X POST -H "Content-Type: application/json" -d '{"id": "0", "jsonrpc": "2.0", "method": "call", "params": {"instance_id": "test-instance", "zome": "my_zome", "function": "create_user", "args": { "user": { "name": "Joe" } }}}' http://localhost:8888
+
+curl -X POST -H "Content-Type: application/json" -d '{"id": "0", "jsonrpc": "2.0", "method": "call", "params": {"instance_id": "test-instance", "zome": "my_zome", "function": "get_users", "args": {} }}' http://localhost:8888
+
+curl -X POST -H "Content-Type: application/json" -d '{"id": "0", "jsonrpc": "2.0", "method": "call", "params": {"instance_id": "test-instance", "zome": "my_zome", "function": "create_commitment", "args": { commitment: { title: "Attend workshop" }, "user_addr": "QmSA2DX51CGfVdrzpq9AjgvJonHm8UM6qaLmSMJx1DLiP3" } }}' http://localhost:8888
